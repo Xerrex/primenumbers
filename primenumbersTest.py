@@ -12,11 +12,11 @@ class TestPrintprimenumbers(unittest.TestCase):
 
 
     def test_if_raiseValueError(self):
-        self.assertRaises(ValueError,printprimenumber('3'))
+        self.assertRaises(ValueError,printprimenumber('m'))
 
     def test_correct_output(self):
         test_value = printprimenumber(5)
-        expected_value= 5
+        expected_value= [3,5]
         self.assertEqual(test_value,expected_value,"the function should return")
 
     def test_for_one_as_output(self):
