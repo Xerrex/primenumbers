@@ -12,7 +12,7 @@ class TestPrintprimenumbers(unittest.TestCase):
 
 
     def test_if_raiseValueError(self):
-        self.assertRaises(ValueError,printprimenumber('m'))
+        self.assertRaises(ValueError)
 
     def test_for_one_as_input(self):
         result = printprimenumber(1)
@@ -24,20 +24,14 @@ class TestPrintprimenumbers(unittest.TestCase):
         e_result = 'Input values should not be negatives'
         self.assertEqual(result,e_result,'the result should equal the e_result')
 
-
-    def test_correct_output(self):
-        test_value = printprimenumber(5)
-        expected_value= [3,5]
-        self.assertEqual(test_value,expected_value,"the function should return")
-
-
-            
-
     def test_output_format(self):
         returnedvalue = printprimenumber(5)
         self.assertIsInstance(returnedvalue, list, "Returned value is a List")
 
-    def test_output_hasno_negatives(self):
-         values = printprimenumber(5)
-         for x in values:
-             self.assertLess(x,1,"X is Less than 1")
+    def test_correct_output(self):
+        result = printprimenumber(5)
+        e_result = [2,3,5]
+        self.assertEqual(result,e_result,"the function should return the Expected result")
+
+
+
