@@ -12,18 +12,21 @@ class TestPrintprimenumbers(unittest.TestCase):
 
 
     def test_if_raiseValueError(self):
-        self.
         self.assertRaises(ValueError,printprimenumber('m'))
+
+    def test_for_one_as_input(self):
+        result = printprimenumber(1)
+        expected='Input must be greater than 1'
+        self.assertEqual(result,expected,'result must equal expected value')
+
+       
 
     def test_correct_output(self):
         test_value = printprimenumber(5)
         expected_value= [3,5]
         self.assertEqual(test_value,expected_value,"the function should return")
 
-    def test_for_one_as_output(self):
-        values= printprimenumber(5)
-        for x in values:
-            self.assertEqual(x,1,"one should not be among the values")
+
             
 
     def test_output_format(self):
