@@ -19,7 +19,11 @@ class TestPrintprimenumbers(unittest.TestCase):
         expected='Input must be greater than 1'
         self.assertEqual(result,expected,'result must equal expected value')
 
-       
+    def test_for_negative_input(self):
+        result = printprimenumber(-10)
+        e_result = 'Input values should not be negatives'
+        self.assertEqual(result,e_result,'the result should equal the e_result')
+
 
     def test_correct_output(self):
         test_value = printprimenumber(5)
