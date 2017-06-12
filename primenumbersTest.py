@@ -12,6 +12,7 @@ class TestPrintprimenumbers(unittest.TestCase):
 
 
     def test_if_raiseValueError(self):
+        self.
         self.assertRaises(ValueError,printprimenumber('m'))
 
     def test_correct_output(self):
@@ -27,9 +28,9 @@ class TestPrintprimenumbers(unittest.TestCase):
 
     def test_output_format(self):
         returnedvalue = printprimenumber(5)
-        self.assertIsInstance(returnedvalue,list,"Returned value is a List")
+        self.assertIsInstance(returnedvalue, list, "Returned value is a List")
 
     def test_output_hasno_negatives(self):
          values = printprimenumber(5)
          for x in values:
-             self.assertLess(x,1,"X is Less that 1")
+             self.assertLess(x,1,"X is Less than 1")
